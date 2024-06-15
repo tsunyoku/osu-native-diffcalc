@@ -8,6 +8,7 @@ using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.Objects;
 using osu.Game.Rulesets.Objects.Drawables;
 using osu.Game.Rulesets.Osu.Objects;
+using osu.Framework.Bindables;
 
 // ReSharper disable once CheckNamespace
 
