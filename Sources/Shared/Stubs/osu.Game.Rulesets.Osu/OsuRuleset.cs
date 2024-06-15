@@ -52,6 +52,8 @@ namespace osu.Game.Rulesets.Osu
                 return new OsuModSpunOut();
             if (typeof(T) == typeof(OsuModTouchDevice))
                 return new OsuModTouchDevice();
+            if (typeof(T) == typeof(OsuModClassic))
+                return new OsuModClassic();
 
             throw new System.NotImplementedException();
         }
@@ -92,6 +94,8 @@ namespace osu.Game.Rulesets.Osu
 
             if (mods.HasFlagFast(LegacyMods.ScoreV2))
                 yield return new ModScoreV2();
+
+            yield return new OsuModClassic();
         }
 
         public override DifficultyCalculator CreateDifficultyCalculator(IWorkingBeatmap beatmap)
