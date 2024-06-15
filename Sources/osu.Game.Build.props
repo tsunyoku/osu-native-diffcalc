@@ -106,6 +106,7 @@
                           $(GameDir)/Rulesets/Mods/ModMuted.cs;
                           $(GameDir)/Rulesets/Mods/ModNoScope.cs;
                           $(GameDir)/Rulesets/Mods/ModAccuracyChallenge.cs;
+                          $(GameDir)/Rulesets/Mods/ModClassic.cs;
                           $(GameDir)/Beatmaps/Formats/LegacyStoryboardDecoder.cs;
                           $(GameDir)/Beatmaps/Formats/JsonBeatmapDecoder.cs;
                           $(GameDir)/Storyboards/Drawables/**/*.cs;"
