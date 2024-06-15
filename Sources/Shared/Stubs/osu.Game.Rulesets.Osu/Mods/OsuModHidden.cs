@@ -21,6 +21,8 @@ namespace osu.Game.Rulesets.Osu.Mods
         public override LocalisableString Description => @"Play with no approach circles and fading circles/sliders.";
         public override double ScoreMultiplier => UsesDefaultConfiguration ? 1.06 : 1;
 
+        public BindableBool OnlyFadeApproachCircles { get; } = new BindableBool();
+
         protected override bool IsFirstAdjustableObject(HitObject hitObject) => !(hitObject is Spinner || hitObject is SpinnerTick);
 
         public override void ApplyToBeatmap(IBeatmap beatmap)
