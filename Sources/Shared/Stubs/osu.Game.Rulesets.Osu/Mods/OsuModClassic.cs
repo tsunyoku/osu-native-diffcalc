@@ -10,7 +10,6 @@ using osu.Game.Rulesets.Osu.UI;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Osu.Objects;
 using osu.Game.Rulesets.UI;
-using osu.Game.Rulesets.Osu.Scoring;
 
 namespace osu.Game.Rulesets.Osu.Mods;
 
@@ -31,6 +30,4 @@ public class OsuModClassic : ModClassic
                 break;
         }
     }
-
-    public HealthProcessor? CreateHealthProcessor(double drainStartTime) => ClassicHealth.Value ? new OsuLegacyHealthProcessor(drainStartTime) : null;
 }
