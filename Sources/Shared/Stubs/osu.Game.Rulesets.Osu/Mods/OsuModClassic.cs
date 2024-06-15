@@ -8,14 +8,13 @@ using osu.Game.Rulesets.Objects;
 using osu.Game.Rulesets.Objects.Drawables;
 using osu.Game.Rulesets.Osu.UI;
 using osu.Game.Rulesets.Scoring;
+using osu.Game.Rulesets.Osu.Objects;
 using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Osu.Mods;
 
 public class OsuModClassic : ModClassic
 {
-    public override Type[] IncompatibleMods => base.IncompatibleMods.Append(typeof(OsuModStrictTracking)).ToArray();
-
     public BindableBool NoSliderHeadAccuracy { get; } = new BindableBool(true);
     public BindableBool ClassicNoteLock { get; } = new BindableBool(true);
     public BindableBool AlwaysPlayTailSample { get; } = new BindableBool(true);
