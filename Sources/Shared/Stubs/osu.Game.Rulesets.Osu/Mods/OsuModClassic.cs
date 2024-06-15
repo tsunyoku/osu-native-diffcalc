@@ -35,16 +35,5 @@ public class OsuModClassic : ModClassic
         }
     }
 
-    public void ApplyToDrawableRuleset(DrawableRuleset<OsuHitObject> drawableRuleset)
-    {
-        var osuRuleset = (DrawableOsuRuleset)drawableRuleset;
-
-        if (ClassicNoteLock.Value)
-        {
-            double hittableRange = OsuHitWindows.MISS_WINDOW - (drawableRuleset.Mods.OfType<OsuModAutopilot>().Any() ? 200 : 0);
-            osuRuleset.Playfield.HitPolicy = new LegacyHitPolicy(hittableRange);
-        }
-    }
-
     public HealthProcessor? CreateHealthProcessor(double drainStartTime) => ClassicHealth.Value ? new OsuLegacyHealthProcessor(drainStartTime) : null;
 }
